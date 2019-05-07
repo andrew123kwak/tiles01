@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    background: #f2f2f2;
+    background: #171e3b;
 }
 
 *,
@@ -161,6 +161,7 @@ body {
     padding: 1rem;
     text-align: justify;
     font-size: 0.1px;
+    background-color: #171e3b;
 }
 
 .container:after {
@@ -179,10 +180,11 @@ body {
 }
 
 .mix {
-    background: #fff;
+    /* background: #fff; */
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
+    color: #fff;
 }
 
 .mix:before {
@@ -254,7 +256,8 @@ body {
 .a-tag {
     position: absolute;
     font-size: 2rem;
-    color: black;
+    color: #fff;
+    text-align: center;
 }
 
 .t1 {
@@ -277,76 +280,32 @@ body {
     align-items: center;
     padding-left: 3%;
     padding-right: 3%;
-    background-color: black;
-
+    background-color: #fff;
 }
 
 .reload-button {
-    width: 100px;
-    height: 30px;
-    background-color: red;
+    width: 120px;
+    height: 48px;
+    background-color: #171e3b;
+    font-size: 15px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 3px;
     border: none;
     color: #fff;
 }
 
 /* Select
 ---------------------------------------------------------------------- */
-select {
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background: #2c3e50;
-  background-image: none;
-}
-/* Remove IE arrow */
-select::-ms-expand {
-  display: none;
-}
-/* Custom Select */
 .select {
-  position: relative;
-  display: flex;
-  width: 20em;
-  height: 3em;
-  line-height: 3;
-  background: #2c3e50;
-  overflow: hidden;
-  border-radius: .25em;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    background-color: #171e3b;
+    border-radius: 0px;
+    margin-left: 15px;
+    color: #fff;
+    text-align: center;
 }
-select {
-  flex: 1;
-  padding: 0 .5em;
-  color: #fff;
-  cursor: pointer;
-}
-/* Arrow */
-.select::after {
-  content: '\25BC';
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  background: #34495e;
-  cursor: pointer;
-  pointer-events: none;
-  -webkit-transition: .25s all ease;
-  -o-transition: .25s all ease;
-  transition: .25s all ease;
-}
-/* Transition */
-.select:hover::after {
-  color: #f39c12;
-}
-
 
 /* Grid Breakpoints
 ---------------------------------------------------------------------- */
