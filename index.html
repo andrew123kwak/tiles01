@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="reset.css" rel="stylesheet"/>
+        <link href="style.css" rel="stylesheet"/>
+
+        <title>MixItUp MultiFilter Demo - Toggle Controls</title>
+    </head>
+    <body>
+        
+        <div class="filter-wrap2">
+            <FORM>
+            <INPUT class="reload-button" TYPE="button" onClick="history.go(0)" VALUE="CLEAR">
+            </FORM>
+
+                  <select class="select" data-filter-group>
+                    <option name="slct" id="slct" value="all">LOOK</option>
+                    <option name="slct" id="slct" value="all">ALL</option>
+                    <option name="slct" id="slct" value=".wood">WOOD</option>
+                    <option name="slct" id="slct" value=".ceramic">CERAMIC</option>
+                    <option name="slct" id="slct" value=".marble">MARBLE</option>
+                    <option name="slct" id="slct" value=".stone">STONE</option>
+                    <option name="slct" id="slct" value=".metal">METAL</option>
+                    <option name="slct" id="slct" value=".pattern">PATTERN</option>
+                    <option name="slct" id="slct" value=".concrete">CONCRETE</option>
+                    
+                  </select>
+
+                  <select class="select" data-filter-group>
+                    <option name="slct" id="slct" value="all">All</option>
+                    <option name="slct" id="slct" value=".green">Green</option>
+                    
+                  </select>
+
+                   <select class="select" data-filter-group>
+                    <option name="slct" id="slct" value="all">All</option>
+                    <option name="slct" id="slct" value=".green">Green</option>
+                    
+                  </select>
+                  
+                  
+               
+                
+                </div>
+
+        </div>
+
+<!--
+        <form class="controls">
+            
+            <fieldset data-filter-group class="control-group">
+                <label class="control-group-label">Color</label>
+
+                <button type="button" class="control control-color" data-toggle=".green">Green</button>
+                <button type="button" class="control control-color" data-toggle=".blue">Blue</button>
+                <button type="button" class="control control-color" data-toggle=".pink">Pink</button>
+            </fieldset>
+
+            <fieldset data-filter-group class="control-group">
+                <label class="control-group-label">Shape</label>
+
+                <button type="button" class="control control-shape" data-toggle=".square">Square</button>
+                <button type="button" class="control control-shape" data-toggle=".circle">Circle</button>
+                <button type="button" class="control control-shape" data-toggle=".triangle">Triangle</button>
+            </fieldset>
+
+            <fieldset data-filter-group class="control-group">
+                <label class="control-group-label">Size</label>
+
+                <button type="button" class="control control-size" data-toggle=".small">Small</button>
+                <button type="button" class="control control-size" data-toggle=".medium">Medium</button>
+                <button type="button" class="control control-size" data-toggle=".large">Large</button>
+            </fieldset>
+
+            <button type="reset" class="control control-text">CLEAR</button>
+<!--
+            <div class="control-group">
+                <button type="button" class="control control-sort" data-sort="default:asc">Asc</button>
+                <button type="button" class="control control-sort" data-sort="default:desc">Desc</button>
+            </div>
+-->
+        </form>
+
+        <div class="container">
+            
+            <!-- 001 -->
+            <div class="mix green small square">
+                <a class="a-tag" href="https://naver.com" target="_black">
+                    <div class="thumbnail"
+                    style="background-image:url('https://uploads-ssl.webflow.com/5ca574a89a78ea378f15c63a/5caade281283e5e4340afb24_Cemento.png')
+                        ">
+                    </div>
+                    <div class="t1">Cemento</div>
+                    <div class="t1 t2">Argyle Stone</div>
+                </a>
+            </div>
+
+            <!-- 002 -->
+            <div class="mix green small square">
+                <a class="a-tag" href="https://naver.com" target="_black">
+                    <div class="thumbnail"
+                    style="background-image:url('https://uploads-ssl.webflow.com/5ca574a89a78ea378f15c63a/5caade357177dc220ed66aba_Graphite.png')
+                        ">
+                    </div>
+                    <div class="t1">Graphite</div>
+                    <div class="t1 t2">Argyle Stone</div>
+                </a>
+            </div>
+
+            
+
+            <div class="mix green medium square"></div>
+            <div class="mix blue large triangle"></div>
+            <div class="mix pink large circle"></div>
+            <div class="mix green small circle"></div>
+            <div class="mix blue medium triangle"></div>
+            <div class="mix pink medium square"></div>
+            <div class="mix blue medium triangle"></div>
+            <div class="mix pink small circle"></div>
+            <div class="mix green large triangle"></div>
+            <div class="mix blue small square"></div>
+            <div class="mix pink small square"></div>
+            <div class="mix green large square"></div>
+            <div class="mix blue large circle"></div>
+
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+        </div>
+
+        <script src="mixitup.min.js"></script>
+        <script src="mixitup-multifilter.js"></script>
+
+        <script>
+            var containerEl = document.querySelector('.container');
+
+            var mixer = mixitup(containerEl, {
+                multifilter: {
+                    enable: true
+                },
+                animation: {
+                    "duration": 400,
+                    "nudge": true,
+                    "reverseOut": false,
+                    "effects": "fade translateZ(-100px)"
+                }
+            });
+        </script>
+    </body>
+</html>
